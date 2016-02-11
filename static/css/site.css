@@ -1,0 +1,1614 @@
+/*
+                                /%%
+                               |__/
+  /%%%%%%%  /%%%%%%  /%%    /%% /%%  /%%%%%%   /%%%%%%
+ /%%_____/ |____  %%|  %%  /%%/| %% /%%__  %% /%%__  %%
+|  %%%%%%   /%%%%%%% \  %%/%%/ | %%| %%%%%%%%| %%  \ %%
+ \____  %% /%%__  %%  \  %%%/  | %%| %%_____/| %%  | %%
+ /%%%%%%%/|  %%%%%%%   \  %/   | %%|  %%%%%%%|  %%%%%%/
+|_______/  \_______/    \_/    |__/ \_______/ \______/
+
+The #1 tool for downloading video on the web!
+
+(c) 2015, 2016 Savieo.com
+
+*/
+/* Base
+-------------------------------------------------- */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr,
+.footer__divider,
+.promo__divider {
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/*!
+ * Preboot v2
+ *
+ * Open sourced under MIT license by @mdo.
+ * Some variables and mixins from Bootstrap (Apache 2 license).
+ */
+/* Base Page Styles
+-------------------------------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  color: #000;
+  font-size: 1.5em;
+  font-weight: 500;
+  font-family: "Avenir Next", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+/* Base Page Pseudo Styles
+-------------------------------------------------- */
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+/* More Resets (from h5bp)
+-------------------------------------------------- */
+hr,
+.footer__divider,
+.promo__divider {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+textarea {
+  resize: vertical;
+}
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+/* Main
+-------------------------------------------------- */
+/* Colors
+-------------------------------------------------- */
+/* Element Colors
+-------------------------------------------------- */
+/* Font
+-------------------------------------------------- */
+/* Font Weights
+-------------------------------------------------- */
+/* Font Spacing
+-------------------------------------------------- */
+/* layout Spacing
+-------------------------------------------------- */
+/*
+// Breakpoints
+@bp-larger-than-mobile    : 400px;
+@bp-larger-than-phablet   : 550px;
+@bp-larger-than-tablet    : 750px;
+@bp-larger-than-desktop   : 1000px;
+@bp-larger-than-desktophd : 1200px;
+*/
+/* Clearfix
+-------------------------------------------------- */
+.clearfix,
+.list,
+.container,
+.header,
+.nav,
+.footer,
+.download,
+.download__options,
+.info,
+.tabs,
+.thumbnails,
+.social-buttons-list {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after,
+.list:before,
+.list:after,
+.container:before,
+.container:after,
+.header:before,
+.header:after,
+.nav:before,
+.nav:after,
+.footer:before,
+.footer:after,
+.download:before,
+.download:after,
+.download__options:before,
+.download__options:after,
+.info:before,
+.info:after,
+.tabs:before,
+.tabs:after,
+.thumbnails:before,
+.thumbnails:after,
+.social-buttons-list:before,
+.social-buttons-list:after {
+  content: " ";
+  display: table;
+  line-height: 0;
+}
+.clearfix:after,
+.list:after,
+.container:after,
+.header:after,
+.nav:after,
+.footer:after,
+.download:after,
+.download__options:after,
+.info:after,
+.tabs:after,
+.thumbnails:after,
+.social-buttons-list:after {
+  clear: both;
+}
+/* Wrapper (not really ness)
+-------------------------------------------------- */
+.wrapper,
+.footer,
+.download,
+.info,
+.tabs,
+.thumbnails {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+/* List
+-------------------------------------------------- */
+.list,
+.social-buttons-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.list__item,
+.social-buttons-list__item {
+  float: left;
+}
+/* Container
+-------------------------------------------------- */
+.container {
+  margin: 0 auto;
+}
+/* Media Queries
+-------------------------------------------------- */
+@media only screen and (min-width: 320px) {
+  .container {
+    max-width: 296px;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .container {
+    max-width: 508px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 724px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container {
+    max-width: 940px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+/* Scraps
+-------------------------------------------------- */
+/*
+.containerXXX {
+    max-width: 1170px; // screen and (min-width: 1211px)
+}
+
+.containerXXX {
+    max-width: 724px; // screen and (max-width: 960px)
+}
+
+.containerXXX {
+    max-width: 508px; // screen and (max-width: 744px)
+}
+
+.containerXXX {
+    max-width: 296px; // screen and (max-width: 518px)
+}
+*/
+/* This stylesheet generated by Transfonter (http://transfonter.org) on February 6, 2016 11:07 PM */
+/* Avenir Next Font -- using latin subset
+-------------------------------------------------- */
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/hinted-subset-AvenirNext-Heavy.eot');
+  src: local('Avenir Next Heavy'), local('AvenirNext-Heavy'), url('../fonts/hinted-subset-AvenirNext-Heavy.eot?#iefix') format('embedded-opentype'), url('../fonts/hinted-subset-AvenirNext-Heavy.woff') format('woff'), url('../fonts/hinted-subset-AvenirNext-Heavy.ttf') format('truetype'), url('../fonts/hinted-subset-AvenirNext-Heavy.svg#AvenirNext-Heavy') format('svg');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/hinted-subset-AvenirNext-Bold.eot');
+  src: local('Avenir Next Bold'), local('AvenirNext-Bold'), url('../fonts/hinted-subset-AvenirNext-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/hinted-subset-AvenirNext-Bold.woff') format('woff'), url('../fonts/hinted-subset-AvenirNext-Bold.ttf') format('truetype'), url('../fonts/hinted-subset-AvenirNext-Bold.svg#AvenirNext-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/hinted-subset-AvenirNext-DemiBold.eot');
+  src: local('Avenir Next Demi Bold'), local('AvenirNext-DemiBold'), url('../fonts/hinted-subset-AvenirNext-DemiBold.eot?#iefix') format('embedded-opentype'), url('../fonts/hinted-subset-AvenirNext-DemiBold.woff') format('woff'), url('../fonts/hinted-subset-AvenirNext-DemiBold.ttf') format('truetype'), url('../fonts/hinted-subset-AvenirNext-DemiBold.svg#AvenirNext-DemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/hinted-subset-AvenirNext-Medium.eot');
+  src: local('Avenir Next Medium'), local('AvenirNext-Medium'), url('../fonts/hinted-subset-AvenirNext-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/hinted-subset-AvenirNext-Medium.woff') format('woff'), url('../fonts/hinted-subset-AvenirNext-Medium.ttf') format('truetype'), url('../fonts/hinted-subset-AvenirNext-Medium.svg#AvenirNext-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/hinted-subset-AvenirNext-Regular.eot');
+  src: local('Avenir Next Regular'), local('AvenirNext-Regular'), url('../fonts/hinted-subset-AvenirNext-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/hinted-subset-AvenirNext-Regular.woff') format('woff'), url('../fonts/hinted-subset-AvenirNext-Regular.ttf') format('truetype'), url('../fonts/hinted-subset-AvenirNext-Regular.svg#AvenirNext-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../fonts/hinted-subset-AvenirNext-UltraLight.eot');
+  src: local('Avenir Next Ultra Light'), local('AvenirNext-UltraLight'), url('../fonts/hinted-subset-AvenirNext-UltraLight.eot?#iefix') format('embedded-opentype'), url('../fonts/hinted-subset-AvenirNext-UltraLight.woff') format('woff'), url('../fonts/hinted-subset-AvenirNext-UltraLight.ttf') format('truetype'), url('../fonts/hinted-subset-AvenirNext-UltraLight.svg#AvenirNext-UltraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+}
+/* Font Awesome -- full charset for now...
+-------------------------------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff') format('woff'), url('../fonts/fontawesome-webfont.ttf') format('truetype'), url('../fonts/fontawesome-webfont.svg#AvenirNext-Heavy') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Paragraph Text
+-------------------------------------------------- */
+.text {
+  margin-bottom: 18px;
+  max-width: 620px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+.text--lighter {
+  color: #666;
+}
+/* Headings
+-------------------------------------------------- */
+.heading,
+.heading--large,
+.footer__heading,
+.download__heading,
+.download__subheading {
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.heading--large {
+  margin-bottom: 30px;
+  color: #000;
+  font-size: 2.4rem;
+  line-height: 1.33333333;
+}
+/* Page
+-------------------------------------------------- */
+/* Components
+-------------------------------------------------- */
+/* Header
+-------------------------------------------------- */
+.header {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 -1px 0 #e2e2e2;
+  box-shadow: inset 0 -1px 0 #e2e2e2;
+}
+.nav {
+  margin: 0 auto;
+  height: 60px;
+  position: relative;
+}
+.nav__brand {
+  margin-top: 13px;
+  margin-right: 58px;
+  float: left;
+}
+.nav__search {
+  margin: 11px 48px 11px 0;
+  float: left;
+}
+.nav__search-input {
+  padding-left: 16px;
+  width: 325px;
+  height: 38px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: #ffffff;
+  border: 1px solid #cecece;
+  float: left;
+  -webkit-box-shadow: inset 0px 1px 3px 0px #dcdcdc;
+  box-shadow: inset 0px 1px 3px 0px #dcdcdc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.nav__search-input:-moz-placeholder {
+  color: #000;
+}
+.nav__search-input::-moz-placeholder {
+  color: #000;
+}
+.nav__search-input:-ms-input-placeholder {
+  color: #000;
+}
+.nav__search-input::-webkit-input-placeholder {
+  color: #000;
+}
+.nav__search-button {
+  width: 50px;
+  height: 38px;
+  color: #ffffff;
+  background-color: #ed1c24;
+  border: 0;
+  float: left;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.nav__search-icon {
+  font-size: 16px;
+  line-height: 16px;
+}
+.nav__links {
+  float: left;
+}
+.nav__links--social {
+  float: right;
+}
+.nav__link {
+  padding: 0 10px;
+  color: #000;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 60px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  float: left;
+}
+.nav__link--social {
+  padding: 0 8px;
+  border: 0;
+  color: #989898;
+}
+.nav__link--social:hover {
+  color: #ed1c24;
+}
+.nav__link-icon {
+  font-size: 16px;
+}
+.nav__link-icon.icon-facebook {
+  font-size: 14px;
+  line-height: 1;
+}
+/* Media Queries
+-------------------------------------------------- */
+@media only screen and (min-width: 320px) {
+  .nav__search {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .nav__search {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .nav__search-input {
+    width: 450px;
+  }
+}
+/* Footer
+-------------------------------------------------- */
+.footer {
+  padding: 40px 0;
+  color: white;
+  background: black;
+}
+.footer__column {
+  margin-right: 20px;
+  width: 220px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.footer__heading {
+  padding: 0;
+  margin-bottom: 14px;
+  color: white;
+  font-size: 1.8rem;
+  line-height: 1.38888889;
+}
+.footer__link {
+  margin-bottom: 2px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 2;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  display: block;
+}
+.footer__link:hover {
+  color: #ed1c24;
+}
+.footer__divider {
+  margin: 40px 0 30px 0;
+  border-color: #1a1a1a;
+}
+.footer__impressum {
+  width: 620px;
+  color: #999;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.42857143;
+}
+/* Logo
+-------------------------------------------------- */
+.logo {
+  width: 102px;
+  height: 28px;
+  text-indent: -9999px;
+  display: block;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGYAAAAcCAYAAACTZsrFAAAEEElEQVR4Ae3aA5AkSRSH8bFxtm3btm3btm0tg2vbto1bnG3bPXnfRLyJyOioV8iqm2tG/Fb58k1X/rdzsmq3KF9e32yw+WwcU1R4ZVwwRszAIYUVybBgLJOxf2FlMiwYMRhrFFYnc4IZhV0Lq5I5wYzDPoXVyKxgDsmFi2jAXjgep4hDsAMaQ/aok/pDcBKOxd5YJYvWoR474hCcjFNwGHZHbYQ+pdgEB8g6nCI/HyB/Xho0+TLMQxOMjw/QD7eiXOaX4zYMwIcwiibMx8UoVbYcP6sE1oko/ayvX4JrMT9gHVKYh6tRpn1KMQg/wfj4SeoOSW9Qg7EwusCFWsVh7lQ0ZlgwPWEiGo+qtD5tYRy0tZt0hGntYMSITAhGak+EcXSv1ecCmBguaG6yLv75v4IRh2RIMN1hHK2w+kyEiWFiULr9cC0ux8OOwQxGH8yFUXTJkGBWKjWv436c47NFNVl9foJR9MC5oodS81Nzk4eUwZ9RbG8zLsGkzX9B6fGuVbMK9vE5ODRI3XpIKXUH2u9LhAnmZ6VmdaumEUZRr62TZTX75KrVNQ8+C6O4CuUJBrOZ0uMPjxPNu0rtwTJ+kDL+lnaDqVglSk2YumiHDT2YOwIa/YiJeBm34gCsYin2WIStcSKOlDCK1fCER4/nldo7ZfwuZfzxpIJRalZtrWAOgInoHVzlsdUdjRUe9Z+gA46KEMx+Sm1fGR+gjO/4XwSDdXEmpio1KWmTWDDFmA/joB9Kra0l5dBDC6YEn3nUvi/jXmNvyPSkg/k5wrE/mWCsvf9dGAdXSI9JMIkEE3x/tav/NuYejKPZWD/pYOznYw/gLZgIpqMUfynj7+Ec3ILJkYLRt77Oyp/v0ArBpPAxJuMp7NcyP/FgPBqvh2NwB7rhcxjFDwHH0Vvto3DEYMrxvUf97173GjLNPRj/4/emWAvlHu2TDybk5IqAu9m1fcZOdw1G5nSDCeHBBIL5Uj+i26/MCabaZxv6OuAIeU5AMIIxeFzk6TAhbJNAMKN8rvFarI8SrILNcBhuQhdMDxnM5lbdplGDmYfh6ImxAY8YJqLWZ/xF61N3t8PprEbZukJtY1EOH7L4JoYdpM8XPjWfoaf4TKn5Qt54LFfJm/nQ55vlaHwS43Q2yGUbcwimFh/BuLBufnvDxNA7bjBzrX8oezG43jmYC4O3h/jBSP0e+BHGwWSrx98uPWTeHvqT0GAjPR7uLfWpn4eTHYNZzedCF0hZIsHInO0xCyai+dYN96n4JuL8b3CqfeI6HA9giCzut/gnbTv6HDPwInZXFqEKd2ExUtJjKs5EMVZxCUZ6j1fm3JNwMPbcvfEypuMb6y/HL3gXI/C0hLC28v8erkY/rJB5xvKL/Hk/qatrmfsvneKJOms/htMAAAAASUVORK5CYII=");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .logo {
+    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAAA4CAMAAACG/+fPAAAAM1BMVEUAAADtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCTtHCRFXWXjAAAAEXRSTlMA32D/z0CAv3CPIK9QnxAw79Wni/MAAAPRSURBVHgB7djrmpwgDAbgQCCgHO//Znuu1RCJ7vSw69Pv127rQF7JIiP8ixgLzwnigziID+IgPoiD+CAObnH+QRhEeg4mPGBlnkMBeBAF4EEUgEfsYvrZ7H+eHx9pCd9CRH6FIau3RCl8yUJ5hT+Q1ccfM4TCathfRETTQm1CnrDkug2Ql4DHmGU/DLJI/4YoXbelFYPDHI3XWTqy9GJhn2xQjoFvMSimrL8PUxOKCeueIhTCj6wFT8NKZen5d2FaP52jbd6ApwmVWVSMEPubMA5R01SHk7jvmogvYLD9FgxN64RvWXCa5Ru4v4QxvwUj1MCXf0Ulq3ZTdAzG34DJOE0SGkguxLyIMb8BQzhNBwAIqCSMqxeCu4dB/zomsOJZEeJo4Uv4WP4wioWvaecYIu/pOBO9jjH7GuIKAJDmo6U6PpzYCi/Ai5d/L2x5WUnbP2ZpF4cRI2yPfo7xwlUMQxcx4HhHD3vn+LdQ5xg2wypj2GB1gnFXMVGYHvxwgwPfkq5jQMAoVzEMuqxjxCYYnhZW+Ie/jEHsgawHJQwjnfEKADTeGK+1mY7JKMWk2OCYRiWEQrme3kvIrGMtw93B5PuY2SnBUIUtZH6VGVcZc2wrtlL5Hsb3+xjlvBpBPrAGK2P21fvD0B2uY1peDOKbMBYnKdzCwjD2eFRiA13DGBziLmPAqRrCi5h6+KTnXaZj5OTrmNa1k1e/hGGHEAMkdtl9TIHrGGhm/s3I4zwg91ndycrbMT3CHQxUmn7nIX6k5Ri5z/YbUn4rxtkK9zAANTo8STxiegWoNsiYwwGmsC67i3Hp50PtOmbzeEoBxxAswsH6DBN3gp3rBoaIsvcNeC5geNZhjw9wINJ8kBWl5BuYFXguY6SS4gsYcaPvcAOTfy8G0guYiGOKhjH8BdhvxIRjJTpG6bOsYRLuNY03vvMD5sc1TcNUmm0AGgaM1GUKhi1nsh4AvPe0hI6IuAyYyD7IMIkoem8pdX5bacT48wfnMu0yFKK/4DPjJ4v13hbkGCUViI+7JjzHNOTJKgYSztMADKpi1JL4uTrQ0nHIpM866Jimv60sqKToGK/OxDELn0TF6G/FHUBGJVnFJH6vdUzmk1zBgFPfijvVi1L4pm9vYaDzLtMx6hdAqzZIA9At0m0zfoYpYpcpGKiL1iG242m61TpoqeI7gB4BJhjWZ+0iBsCfF+MIAKA5ZGEP2hYDijHLCuKDtFSYYVifGdAxW3zCMWH3TcCKxQYLv9IspWBwSw9leG1WY+gbUcHsS1quYbZkCm4rMlEe6thfgOh21M+1+lXTIYqdEAAAAABJRU5ErkJggg==");
+    background-size: 102px 28px;
+  }
+}
+/* Icons
+-------------------------------------------------- */
+.icon,
+.icon-search:before,
+.icon-search--header:before,
+.icon-facebook:before,
+.icon-twitter:before,
+.icon-youtube:before,
+.icon-caret-down:before,
+.icon-chevron-right:before,
+.social-button:before,
+.download__input:checked ~ .download__label:before,
+.download--alert__message:before,
+.thumbnail__image:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon--largerXXX {
+  font-size: 16px;
+  line-height: 16px;
+}
+.icon-search:before {
+  content: "\f002";
+}
+.icon-search--header:before {
+  content: "\f002";
+}
+.icon--search:before {
+  content: "\f002";
+}
+.icon--hamburger:before {
+  content: "\f0c9";
+}
+.icon--close:before {
+  content: "\f00d";
+}
+.icon--facebook:before {
+  content: "\f230";
+}
+.icon--twitter:before {
+  content: "\f099";
+}
+.icon--youtube:before {
+  content: "\f16a";
+}
+.icon-facebook:before {
+  content: "\f09a";
+}
+.icon-twitter:before {
+  content: "\f099";
+}
+.icon-youtube:before {
+  content: "\f16a";
+}
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+.icon-chevron-right:before {
+  content: "\f054";
+}
+/* Promo Block (for Ads and Social links etc.)
+-------------------------------------------------- */
+.promo {
+  width: 300px;
+}
+.promo__divider {
+  margin: 0;
+  height: 16px;
+  border: 0;
+}
+/* Site Logos
+-------------------------------------------------- */
+.site-logo,
+.site-logo--youtube,
+.site-logo--gq,
+.site-logo--allure,
+.site-logo--wmg,
+.site-logo--bonappetit {
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  border-radius: 100px;
+  background-image: url(/img/site-logos/site-logos.png);
+  background-size: 500%;
+  display: block;
+}
+.site-logo--large {
+  width: 72px;
+  height: 72px;
+}
+.site-logo--youtube {
+  background-color: #0c48fe;
+  background-position: 0 71.42857%;
+}
+.site-logo--gq {
+  background-color: #0d0d0d;
+  background-position: 50% 42.85714%;
+}
+.site-logo--allure {
+  background-color: #db2144;
+  background-position: 50% 0;
+}
+.site-logo--wmg {
+  background-color: #1462a7;
+  background-position: 25% 14.28571%;
+  background-position: 0 0;
+}
+.site-logo--bonappetit {
+  background-color: #fee409;
+  background-position: 25% 28.57143%;
+}
+/*
+border-radius: 50px;
+border-width: 0;
+box-shadow: 0 0 1px rgba(0, 0, 0, .25);
+bottom: 5%;
+left: 3.27%;
+opacity: .8;
+width: 13.33%;
+height: 23.66%;
+min-width: 40px;
+min-height: 40px;
+visibility: visible
+*/
+/* Social Buttons
+-------------------------------------------------- */
+.social-button {
+  margin: 0;
+  padding: 0;
+  width: 62px;
+  height: 50px;
+  background: #e2e2e2;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.social-button:before {
+  content: " ";
+  top: 0;
+  right: 0;
+  width: 62px;
+  height: 50px;
+  color: white;
+  font-size: 2.4rem;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+}
+.social-button--large {
+  width: 300px;
+}
+.social-button--large__label {
+  padding: 14px 20px;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 22px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+.social-button--facebook .social-button--large__label {
+  background: #465da8;
+}
+.social-button--twitter .social-button--large__label {
+  background: #47b1f0;
+}
+.social-button--google .social-button--large__label {
+  background: #db544e;
+}
+.social-button--facebook:before {
+  content: "\f09a";
+  background: #40559a;
+}
+.social-button--twitter:before {
+  content: "\f099";
+  background: #34a9ee;
+}
+.social-button--google:before {
+  content: "\f0d5";
+  background: #d8443d;
+}
+.social-button--tumblr:before {
+  content: "\f173";
+  background: #38445c;
+}
+.social-button--pinterest:before {
+  content: "\f0d2";
+  background: #c10022;
+}
+.social-button--pinterest-alt:before {
+  content: "\f0d2";
+  color: #c10022;
+  font-size: 3rem;
+  line-height: 52px;
+  background: white;
+}
+.social-button--stumbleupon:before {
+  content: "\f1a4";
+  background: #e44421;
+}
+.social-button--vk:before {
+  content: "\f189";
+  background: #46658f;
+}
+/* Social Buttons List
+-------------------------------------------------- */
+/* Download
+-------------------------------------------------- */
+.download {
+  min-height: 349px;
+  background: #141414;
+}
+.download__image {
+  width: 620px;
+  height: 349px;
+  background-size: cover;
+  background-position: center center;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.download__select {
+  width: 320px;
+  height: 349px;
+  background: black;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.download__heading,
+.download__subheading {
+  margin-bottom: 8px;
+  padding: 16px 20px;
+  width: 100%;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1;
+  border-bottom: 1px solid #212121;
+}
+.download__subheading {
+  margin: 0;
+  padding: 8px 20px 16px 20px;
+  color: #656565;
+  border: 0;
+}
+.download__options {
+  padding-left: 20px;
+}
+.download__option {
+  margin-right: 16px;
+  margin-bottom: 16px;
+  float: left;
+}
+.download__input {
+  display: none;
+}
+.download__input:disabled ~ .download__label {
+  color: #656565;
+  background: black;
+  border: 2px solid #656565;
+  cursor: default;
+}
+.download__input:checked ~ .download__label {
+  color: white;
+  background: #ed1c24;
+  border: 2px solid #ed1c24;
+}
+.download__input:checked ~ .download__label:before {
+  content: "\f00c";
+  top: 5px;
+  left: 7px;
+  color: white;
+  position: absolute;
+}
+.download__label {
+  width: 84px;
+  height: 24px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+  text-align: center;
+  background: black;
+  border: 2px solid white;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.download__button {
+  bottom: 20px;
+  margin: 0 20px;
+  width: 280px;
+  height: 38px;
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  background: #ed1c24;
+  border-radius: 100px;
+  position: absolute;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  outline: 0;
+  border: 0;
+  -webkit-box-shadow: 0px 3px 0px 0px #970c11;
+  box-shadow: 0px 3px 0px 0px #970c11;
+}
+.download__button:hover {
+  background: #e7121a;
+}
+.download__button:active {
+  background: #d91119;
+}
+/* Download Alert
+-------------------------------------------------- */
+.download--alert {
+  background-color: #141414;
+  background-image: url(/img/fuzzy-bkgd.png);
+  background-repeat: repeat;
+  background-position: 0 0;
+  -webkit-animation: noise 0.4s infinite linear alternate;
+  -moz-animation: noise 0.4s infinite linear alternate;
+  -o-animation: noise 0.4s infinite linear alternate;
+  animation: noise 0.4s infinite linear alternate;
+}
+.download--alert .download__image {
+  display: none;
+}
+.download--alert .download__select {
+  display: none;
+}
+.download--alert__banner {
+  margin-top: 125px;
+  height: 100px;
+  background: #ed1c24;
+}
+.download--alert__message {
+  padding-top: 24px;
+  padding-left: 77px;
+  width: 84%;
+  color: white;
+  font-size: 2.1rem;
+  font-weight: 600;
+  line-height: 1.23809524;
+  position: relative;
+}
+.download--alert__message:before {
+  content: "\f06a";
+  top: 0;
+  left: 0;
+  color: white;
+  font-size: 64px;
+  line-height: 102px;
+  position: absolute;
+}
+@-webkit-keyframes noise {
+  0% {
+    background-position: 10px 200px;
+  }
+  20% {
+    background-position: -50px 0;
+  }
+  40% {
+    background-position: 100px -10px;
+  }
+  60% {
+    background-position: 0 -150px;
+  }
+  80% {
+    background-position: -100px -30px;
+  }
+  100% {
+    background-position: 160px -60px;
+  }
+}
+@-moz-keyframes noise {
+  0% {
+    background-position: 10px 200px;
+  }
+  20% {
+    background-position: -50px 0;
+  }
+  40% {
+    background-position: 100px -10px;
+  }
+  60% {
+    background-position: 0 -150px;
+  }
+  80% {
+    background-position: -100px -30px;
+  }
+  100% {
+    background-position: 160px -60px;
+  }
+}
+@-o-keyframes noise {
+  0% {
+    background-position: 10px 200px;
+  }
+  20% {
+    background-position: -50px 0;
+  }
+  40% {
+    background-position: 100px -10px;
+  }
+  60% {
+    background-position: 0 -150px;
+  }
+  80% {
+    background-position: -100px -30px;
+  }
+  100% {
+    background-position: 160px -60px;
+  }
+}
+@keyframes noise {
+  0% {
+    background-position: 10px 200px;
+  }
+  20% {
+    background-position: -50px 0;
+  }
+  40% {
+    background-position: 100px -10px;
+  }
+  60% {
+    background-position: 0 -150px;
+  }
+  80% {
+    background-position: -100px -30px;
+  }
+  100% {
+    background-position: 160px -60px;
+  }
+}
+/* Media Queries
+-------------------------------------------------- */
+/* Video Info (to be part of Download?)
+-------------------------------------------------- */
+.info {
+  padding: 30px 0;
+}
+.info__left {
+  margin-right: 20px;
+  width: 620px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.info__right {
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.info__title {
+  color: #000;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 1.33333333;
+}
+.info__site-logo {
+  margin-top: 12px;
+  margin-right: 12px;
+  float: left;
+}
+.info__site {
+  margin-top: 12px;
+  color: #989898;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.28571429;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.info__link {
+  margin-top: 4px;
+  padding: 4px 8px;
+  width: 350px;
+  color: #989898;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.33333333;
+  border: 1px solid #e2e2e2;
+}
+/* Media Queries
+-------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .info__left {
+    margin: 0;
+    width: 100%;
+  }
+  .info__right {
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .info__left {
+    margin-right: 20px;
+    width: 620px;
+  }
+  .info__right {
+    display: block;
+  }
+}
+/* Tabs
+-------------------------------------------------- */
+.tabs__buttons {
+  height: 48px;
+  border-top: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e2e2e2;
+  background: white;
+}
+.tabs__button {
+  padding: 0 34px;
+  height: 49px;
+  color: #444;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-align: center;
+  border-right: 1px solid #e2e2e2;
+  border-bottom: 1px solid transparent;
+  cursor: pointer;
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+.tabs__button:hover {
+  color: #ed1c24;
+}
+.tabs__button:first-child {
+  border-left: 1px solid #e2e2e2;
+}
+.tabs__button.is-active {
+  background: #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+}
+.tabs__info {
+  padding: 40px 0;
+  color: #666;
+  background: #f4f4f4;
+  border-bottom: 1px solid #e2e2e2;
+  display: none;
+}
+.tabs__info.is-active {
+  display: block;
+}
+/* Media Queries
+-------------------------------------------------- */
+@media only screen and (min-width: 480px) {
+  .tabs__button {
+    padding: 0;
+    width: 33.3333333%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .tabs__button {
+    padding: 0 34px;
+    width: auto;
+  }
+}
+/* Thumbnails
+-------------------------------------------------- */
+.thumbnails {
+  padding: 36px 0 12px 0;
+  background: #f4f4f4;
+}
+.thumbnail {
+  margin-right: 20px;
+  margin-bottom: 40px;
+  width: 300px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+}
+.thumbnail:nth-child(3n+1) {
+  clear: both;
+}
+.thumbnail:nth-child(3n) {
+  margin-right: 0;
+}
+.thumbnail__image {
+  width: 300px;
+  height: 169px;
+  background-size: cover;
+  background-position: center center;
+  background-color: #e2e2e2;
+  position: relative;
+  overflow: hidden;
+}
+.thumbnail__image:before {
+  content: "\f052";
+  top: 44.5px;
+  left: 110px;
+  width: 80px;
+  height: 80px;
+  color: white;
+  font-size: 3.2rem;
+  line-height: 74px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  border-radius: 100px;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.thumbnail__image:hover:before {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.thumbnail__site-logo {
+  left: 12px;
+  bottom: 12px;
+  position: absolute;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.thumbnail__title {
+  margin-top: 18px;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.33333333;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+.thumbnail__title:hover {
+  color: #ed1c24;
+}
+.thumbnail__site {
+  margin-top: 4px;
+  color: #989898;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.18181818;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+/* Media Queries
+-------------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .thumbnail {
+    margin-right: 20px;
+    margin-bottom: 30px;
+    width: 228px;
+  }
+  .thumbnail__image {
+    width: 228px;
+    height: 129px;
+  }
+  .thumbnail__image:before {
+    top: 24.5px;
+    left: 74px;
+  }
+  .thumbnail__title {
+    margin-top: 12px;
+    font-size: 1.6rem;
+    line-height: 1.3125;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .thumbnail {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    width: 300px;
+  }
+  .thumbnail__image {
+    width: 300px;
+    height: 169px;
+  }
+  .thumbnail__image:before {
+    top: 44.5px;
+    left: 110px;
+  }
+  .thumbnail__title {
+    margin-top: 18px;
+    font-size: 1.8rem;
+    line-height: 1.33333333;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .thumbnail {
+    margin-right: 30px;
+    margin-bottom: 50px;
+    width: 370px;
+  }
+  .thumbnail__image {
+    width: 370px;
+    height: 209px;
+  }
+  .thumbnail__image:before {
+    top: 64.5px;
+    left: 145px;
+  }
+}
+.u--text-center {
+  text-align: center;
+}
